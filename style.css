@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./idiot.jpg);
+  overflow: hidden;
+  background-size: cover;
+}
+
+.opacity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* z-index: 1; */
+  background: rgba(0, 0, 0, 0.55);
+}
+h1 {
+  color: #dfd9d9;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 4.5em;
+  text-shadow: -2px 2px 2px black;
+}
+
+i {
+  color: yellow;
+}
+
+.dots {
+  align-items: center;
+  display: flex;
+  height: 2em;
+  width: 5em;
+  margin-top: 2em;
+  margin-left: 1em;
+}
+.dot {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.55em;
+  background-color: yellow;
+  opacity: 0;
+}
+
+#one {
+  animation: animeone 2s infinite;
+}
+#two {
+  animation: animetwo 2s infinite;
+}
+#three {
+  animation: animethree 2s infinite;
+}
+@keyframes animeone {
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animetwo {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animethree {
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .opacity {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  body {
+    background-size: cover;
+    overflow: hidden;
+  }
+  .dots {
+    margin-top: 1em;
+  }
+  .dot {
+    height: 0.5em;
+    width: 0.5em;
+  }
+  i {
+  }
+}
